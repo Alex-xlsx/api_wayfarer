@@ -14,5 +14,6 @@ mongoose.connect(connectionString, configOptions)
   .catch((err) => console.log(`MongoDB connection error: ${err}`));
 
 module.exports = {
-  
+  City: require('./City'),
+  BlogPost: require('./BlogPost')
 };
