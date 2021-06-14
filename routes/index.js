@@ -1,3 +1,4 @@
 module.exports = {
-  wayfarer: require('./cityRoutes'),
+  cities: require('./cityRoutes'),
+  blogPosts: require('./blogPostRoutes')
 };
