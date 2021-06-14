@@ -13,7 +13,8 @@ app.use(cors());
 app.use(express.json());
 
 // middleware - API routes
-app.use('/api/v1/wayfarer', routes.wayfarer);
+app.use('/api/v1/wayfarer/cities', routes.cities);
+app.use('/api/v1/wayfarer/blogs', routes.blogPosts);
 
 // listen
 app.listen(port, () => console.log(`Server is running on port ${port}`));
