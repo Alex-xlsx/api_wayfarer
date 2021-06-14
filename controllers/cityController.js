@@ -14,6 +14,16 @@ const index = (req, res) => {
   });
 };
 
+const show = (req, res) => {
+  db.City.findById(req.params.id)
+    .populate('posts')
+    .exec((err, foundCity) => {
+      if (err) handleError(res, err);
+      res.json(foundCity);
+    })
+}
+
 module.exports = {
-  index
+  index,
+  show,
 };
